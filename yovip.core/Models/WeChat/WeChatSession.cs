@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VIP.Core.Models
+namespace YoVip.Core.Models
 {
     public class WeChatSession
     {

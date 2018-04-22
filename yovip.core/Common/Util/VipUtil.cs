@@ -1,8 +1,8 @@
 ﻿
 
-namespace VIP.Core
+namespace YoVip.Core
 {
-    using VIP.Core.Models;
+    using YoVip.Core.Models;
     public static class VipUtil
     {
         public static IMiniprogram Miniprogram = new Miniprogram("wx6647cb456db305dd", "c87dc3870c226091f0778c3d0544147a");

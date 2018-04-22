@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Membership]
+(
+	[Id] BIGINT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	[ShopId] BIGINT NOT NULL,
+	[Mobile] BIGINT NOT NULL, 
+	[NickName] BIGINT NOT NULL,	
+	[LastLogTime] DATETIME NOT NULL,
+	[AvatarUrl] NVARCHAR(500) NOT NULL
+)

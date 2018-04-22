@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VIP.Core.Common.Util
+namespace YoVip.Core
 {
     public static class Guard
     {

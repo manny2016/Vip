@@ -3,7 +3,7 @@
 using System;
 using System.Text;
 
-namespace VIP.Core
+namespace YoVip.Core
 {
     public class AESUtil
     {

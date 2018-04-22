@@ -1,0 +1,28 @@
+<!-- index.wxml-->
+<view class="container">
+<view class='yovip-banner'>
+  <cover-image src='https://www.yourc.club/Content/images/yovip.jpg'></cover-image>
+</view>
+ <view class='yovip-account'>
+    <view class='yovip-account-data'>
+      <label class='label'>积分</label>
+       <label class='line-row'></label> 
+      <label class='label'>积分</label>
+       <label class='line-row'></label> 
+      <label class='label'>积分</label>
+    </view>
+    <view class='yovip-account-data'>
+      <label class='label'>积分</label>
+       <label class='line-row'></label> 
+      <label class='label'>积分</label>
+       <label class='line-row'></label> 
+      <label class='label'>积分</label>
+    </view>
+ </view>
+ <import src="../../template/list.wxml"/>
+  <view class="tui-content" style='padding-right:5px;'>
+    <template  wx:for="{{menu}}" is="list" data="{{item}}"></template>
+  </view>
+</view> 
+
+

@@ -1,0 +1,16 @@
+/**index.wxss**/
+.yovip-banner{
+  padding: 25px;
+}
+.yovip-account{
+  display: flex;
+  flex-direction:  column;  
+}
+.yovip-account-data{
+  display: flex;
+  flex-direction:  row;
+  padding: 5px;
+}
+.label{
+  padding: 10px;
+}

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VIP.Core.Models;
+using YoVip.Core.Models;
 
-namespace VIP.Core
+namespace YoVip.Core
 {
     using Newtonsoft.Json;
     using Org.Joey.Common;
