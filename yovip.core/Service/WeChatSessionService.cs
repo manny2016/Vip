@@ -10,6 +10,7 @@ namespace YoVip.Core
     using Newtonsoft.Json;
     using Org.Joey.Common;
     using System.Security.Cryptography;
+    
 
     public class WeChatSessionService : IWeChatSessionService
     {
@@ -51,8 +52,10 @@ namespace YoVip.Core
         }
         private WeChatUser Decrypt(string encryptedData, string iv, string sessionKey)
         {
+#pragma warning disable IDE0017 // Simplify object initialization
             AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
-            //设置解密器参数  
+#pragma warning restore IDE0017 // Simplify object initialization
+                               //设置解密器参数  
             aes.Mode = CipherMode.CBC;
             aes.BlockSize = 128;
             aes.Padding = PaddingMode.PKCS7;

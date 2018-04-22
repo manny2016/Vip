@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\libs\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\org.joey.common\org.joey.common\bin\Debug\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
@@ -42,11 +43,14 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="org.joey.common">
-      <HintPath>..\libs\org.joey.common.dll</HintPath>
+    <Reference Include="org.joey.common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\org.joey.common\org.joey.common\bin\Debug\org.joey.common.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,11 +66,14 @@
     <Compile Include="Contracts\Models\WeChat\IWeChatAuthorization.cs" />
     <Compile Include="Contracts\Models\WeChat\IWeChatLoginUser.cs" />
     <Compile Include="Contracts\Services\IWeChatSessionService.cs" />
+    <Compile Include="DBHelper\Extension\DatabaseExtension.cs" />
+    <Compile Include="Enums\CardType.cs" />
     <Compile Include="Models\WeChat\Miniprogram.cs" />
     <Compile Include="Models\WeChat\WeChatAuthorization.cs" />
     <Compile Include="Models\WeChat\WeChatLoginUser.cs" />
     <Compile Include="Models\WeChat\WeChatSession.cs" />
     <Compile Include="Models\WeChat\WeChatUser.cs" />
+    <Compile Include="DBHelper\Models\MSSqlDataEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\WeChatSessionService.cs" />
   </ItemGroup>
@@ -74,7 +81,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Enums\" />
     <Folder Include="Models\Entities\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

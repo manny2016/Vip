@@ -4,8 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using VIP.Core;
-using VIP.Core.Models;
+using YoVip.Core;
+using YoVip.Core.Models;
 
 namespace VIP.Api.Controllers
 {

@@ -119,3 +119,11 @@
 /yovip.core/bin/Release
 /yoip.core.services/obj/Debug
 /yovip.core/obj/Release
+/databases/yoip.data/bin/Debug
+/portals/WebApplication1/bin
+/portals/WebApplication1/obj/Debug
+/portals/yovip.api/bin
+/portals/yovip.api/obj/Debug
+/yoip.core.services/bin/Debug
+/databases/yoip.data/obj/Debug
+/databases/yoip.data/yoip.data.dbmdl

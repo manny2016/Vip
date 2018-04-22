@@ -1,9 +1,11 @@
 ﻿
 
 
-namespace VIP.Core
+namespace YoVip.Core
 {
-    using VIP.Core.Models;
+    using YoVip.Core;
+    using YoVip.Core.Models;
+
     public interface IWeChatSessionService
     {
         WeChatSession CreateWeChatSession(IWeChatLoginUser loginUseer);
