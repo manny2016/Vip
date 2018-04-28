@@ -127,3 +127,5 @@
 /yoip.core.services/bin/Debug
 /databases/yoip.data/obj/Debug
 /databases/yoip.data/yoip.data.dbmdl
+/test/yo.core.service.test/bin/Debug
+/test/yo.core.service.test/obj/Debug

@@ -1,6 +1,6 @@
 ﻿
 
-namespace YoVip.Core.DBHelper
+namespace YoVip.Core.Database
 {
 
     using System.Data.Linq.Mapping;

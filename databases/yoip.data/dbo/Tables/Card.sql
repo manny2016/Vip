@@ -1,9 +1,0 @@
-﻿CREATE TABLE [dbo].[Card]
-(
-	[Id]			BIGINT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-	[Name]			NVARCHAR(50),
-	[ShopId]		BIGINT NOT NULL,
-	[CardType]		INT NOT NULL,
-	[ProfileUri]	NVARCHAR(100),
-	[Strategy]		NVARCHAR(MAX)
-)

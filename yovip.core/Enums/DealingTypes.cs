@@ -6,21 +6,15 @@ using System.Threading.Tasks;
 
 namespace YoVip.Core
 {
-    public enum CardType
+    public enum DealingTypes
     {
-        Nonne = 0,
         /// <summary>
-        /// 积分卡（消费后积分）
+        /// 预存
         /// </summary>
-        Scorecard,
+        Prestore = 1,
         /// <summary>
-        /// 预存金额
+        /// 消费
         /// </summary>
-        ValueCard,
-        /// <summary>
-        /// 计次卡
-        /// </summary>
-        CountCard,
-
+        Expense = 2
     }
 }

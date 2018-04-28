@@ -1,4 +1,0 @@
-﻿CREATE TABLE [dbo].[Logging]
-(
-	[Id] INT NOT NULL PRIMARY KEY
-)
