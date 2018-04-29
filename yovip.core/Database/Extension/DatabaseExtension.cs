@@ -1,5 +1,5 @@
 ﻿
-namespace YoVip.Core.DBHelper
+namespace YoVip.Core
 {
     using Microsoft.Practices.EnterpriseLibrary.Data;
     using System.Data;
@@ -12,28 +12,33 @@ namespace YoVip.Core.DBHelper
     using System.Data.SqlClient;
     public static class DatabaseExtension
     {
-        public static IEnumerable<T> SqlQuery<T>(this Database database, DbCommand command) where T : MSSqlDataEntity
+        public static string ESC(this string text)
         {
-            using (IDataReader reader = database.ExecuteReader(command))
-            {
-                while (reader.Read())
-                {
-                    T t = Activator.CreateInstance<T>();
-                    var columns = reader.GetSchemaTable().Columns;
-                    foreach (var column in columns)
-                    {
-                        DataColumn col = column as DataColumn;
-                        t.Evaluation(col.ColumnName, reader[col.ColumnName]);
-                    }
-                    yield return t;
-                }
-            }
+            return text.Replace("'", "\'")
+                .Replace("\"", "\\\"");
         }
-        public static IEnumerable<T> SqlQuery<T>(this Database database, string queryString, SqlParameter[] parameters) where T : MSSqlDataEntity
-        {
-            var command = new SqlCommand(queryString);
-            command.Parameters.AddRange(parameters);
-            return database.SqlQuery<T>(command);
-        }
+        //public static IEnumerable<T> SqlQuery<T>(this Database database, DbCommand command) where T : MSSqlDataEntity
+        //{
+        //    using (IDataReader reader = database.ExecuteReader(command))
+        //    {
+        //        while (reader.Read())
+        //        {
+        //            T t = Activator.CreateInstance<T>();
+        //            var columns = reader.GetSchemaTable().Columns;
+        //            foreach (var column in columns)
+        //            {
+        //                DataColumn col = column as DataColumn;
+        //                t.Evaluation(col.ColumnName, reader[col.ColumnName]);
+        //            }
+        //            yield return t;
+        //        }
+        //    }
+        //}
+        //public static IEnumerable<T> SqlQuery<T>(this Database database, string queryString, SqlParameter[] parameters) where T : MSSqlDataEntity
+        //{
+        //    var command = new SqlCommand(queryString);
+        //    command.Parameters.AddRange(parameters);
+        //    return database.SqlQuery<T>(command);
+        //}
     }
 }

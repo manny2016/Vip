@@ -20,5 +20,9 @@ namespace YoVip.Core.Models.Entities
         public virtual DateTime? RegisteredTime { get; set; }
         public virtual DateTime? LastAccessTime { get; set; }
 
+        public override string GenernateInsertValueString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

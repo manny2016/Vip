@@ -16,5 +16,9 @@ namespace YoVip.Core.Models.Entities
         public virtual long? SharedFrom { get; set; }
         public virtual DateTime? CreatedTime { get; set; }
 
+        public override string GenernateInsertValueString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

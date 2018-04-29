@@ -24,5 +24,10 @@ namespace YoVip.Core.Models.Entities
         public virtual long? RelatedCouponId { get; set; }
         public virtual DateTime? CreatedAt { get; set; }
         public virtual string Addition { get; set; }
+
+        public override string GenernateInsertValueString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

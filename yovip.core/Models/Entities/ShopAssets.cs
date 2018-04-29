@@ -4,6 +4,7 @@
 
 namespace YoVip.Core.Models.Entities
 {
+    using System;
     using YoVip.Core.Database;
     public class ShopAssets : MySQLDataEntity
     {
@@ -14,5 +15,10 @@ namespace YoVip.Core.Models.Entities
         public virtual string ProfileUrl { get; set; }
         public virtual string Description { get; set; }
         public virtual string Settings { get; set; }
+
+        public override string GenernateInsertValueString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
