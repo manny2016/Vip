@@ -5,18 +5,7 @@
 </view>
  <view class='yovip-account'>
     <view class='yovip-account-data'>
-      <label class='label'>积分</label>
-       <label class='line-row'></label> 
-      <label class='label'>积分</label>
-       <label class='line-row'></label> 
-      <label class='label'>积分</label>
-    </view>
-    <view class='yovip-account-data'>
-      <label class='label'>积分</label>
-       <label class='line-row'></label> 
-      <label class='label'>积分</label>
-       <label class='line-row'></label> 
-      <label class='label'>积分</label>
+    <button  open-type='' >激活卡片</button>
     </view>
  </view>
  <import src="../../template/list.wxml"/>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YoVip.Core.Models
 {
-    public class WeChatAuthorization : IWeChatAuthorization
+    public class WeChatAuthorization : IWxAuthorization
     {
         [Newtonsoft.Json.JsonProperty("session_key")]
         public string SessionKey { get; set; }

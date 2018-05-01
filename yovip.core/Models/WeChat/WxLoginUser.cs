@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YoVip.Core.Models
 {
-    public class WeChatLoginUser : IWeChatLoginUser
+    public class WeChatLoginUser : IWxLoginUser
     {
         public WeChatLoginUser(string code, string iv, string data, string signature)
         {

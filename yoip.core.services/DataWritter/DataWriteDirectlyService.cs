@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace YoVip.Core
+namespace YoVip.Core.Services
 {
     using Microsoft.Practices.EnterpriseLibrary.Data;
     using System.Data;
+    using System;
+    using System.Collections.Generic;
 
     public class DataWriteDirectlyService : IDataWriteDirectlyService<IDataEntity>
     {
@@ -21,7 +19,7 @@ namespace YoVip.Core
                 //   DatabaseFactory.SetDatabaseProviderFactory(DatabaseProviderFactory)
 
                 var queryString = service.GenerateExecuteNonQuery(entities);
-                
+
                 int i = database.ExecuteNonQuery(CommandType.Text, queryString);
                 Console.WriteLine("Werite {0} ", i);
             }

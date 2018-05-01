@@ -8,7 +8,7 @@ var homeMenu = [
     'url': '../../pages/accordion/accordion'
   },  
   {
-    'title': '进入店铺',
+    'title': '进入公众号',
     'url': '../../pages/accordion/accordion'
   }  
 ]

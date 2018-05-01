@@ -14,9 +14,9 @@ namespace VIP.Api
             // Web API routes
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
-                name: "WeChatAgent",
-                routeTemplate: "api/wechat/{action}",
-                defaults: new { controller = "Decode" }
+                name: "Miniprogram",
+                routeTemplate: "api/yovip/{action}",
+                defaults: new { controller = "YoVip" }
             );
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

@@ -5,13 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using YoVip.Core;
 using YoVip.Core.Models.Entities;
+using YoVip.Core.Services;
 
 namespace StreamWriteTest
 {
+
     class Program
     {
         static void Main(string[] args)
         {
+            DateTime dt = DateTime.Now;
             for (var i = 1; i < 10000; i++)
             {
                 Shop shop = new Shop()
@@ -28,6 +31,7 @@ namespace StreamWriteTest
                 };
                 DataWriteStreamService.Stream.Write(shop);
             }
+            Console.WriteLine("Completed in {0}", DateTime.Now.Subtract(dt).TotalSeconds);
             Console.ReadLine();
         }
     }

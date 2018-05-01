@@ -84,11 +84,12 @@
   <ItemGroup>
     <Compile Include="Common\Util\AESUtil.cs" />
     <Compile Include="Common\Util\Guard.cs" />
-    <Compile Include="Common\Util\VipUtil.cs" />
+    <Compile Include="Common\Util\WxUtil.cs" />
     <Compile Include="Contracts\Models\IDataEntity.cs" />
-    <Compile Include="Contracts\Models\WeChat\IMiniprogram.cs" />
-    <Compile Include="Contracts\Models\WeChat\IWeChatAuthorization.cs" />
-    <Compile Include="Contracts\Models\WeChat\IWeChatLoginUser.cs" />
+    <Compile Include="Contracts\Models\Wx\IMiniprogram.cs" />
+    <Compile Include="Contracts\Models\Wx\IWxAccessToken.cs" />
+    <Compile Include="Contracts\Models\Wx\IWxtAuthorization.cs" />
+    <Compile Include="Contracts\Models\Wx\IWxLoginUser.cs" />
     <Compile Include="Contracts\Services\IDataWriteDirectlyService.cs" />
     <Compile Include="Contracts\Services\IDataWriteStreamService.cs" />
     <Compile Include="Contracts\Services\IDataWritter.cs" />
@@ -104,16 +105,15 @@
     <Compile Include="Models\Entities\ShopAdmin.cs" />
     <Compile Include="Models\Entities\ShopAssets.cs" />
     <Compile Include="Models\WeChat\Miniprogram.cs" />
-    <Compile Include="Models\WeChat\WeChatAuthorization.cs" />
-    <Compile Include="Models\WeChat\WeChatLoginUser.cs" />
-    <Compile Include="Models\WeChat\WeChatSession.cs" />
-    <Compile Include="Models\WeChat\WeChatUser.cs" />
+    <Compile Include="Models\WeChat\WxAccessToken.cs" />
+    <Compile Include="Models\WeChat\WxAuthorization.cs" />
+    <Compile Include="Models\WeChat\WxLoginUser.cs" />
+    <Compile Include="Models\WeChat\WxResults\QRCodeWxResponse.cs" />
+    <Compile Include="Models\WeChat\WxResults\WxResponse.cs" />
+    <Compile Include="Models\WeChat\WxSession.cs" />
+    <Compile Include="Models\WeChat\WxUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\DataWriteStream\BatchProcessor.cs" />
-    <Compile Include="Service\DataWriteStream\DataWriteDirectlyService.cs" />
-    <Compile Include="Service\DataWriteStream\DataWriteStreamService.cs" />
-    <Compile Include="Service\DataWriteStream\ShopDataWriter.cs" />
-    <Compile Include="Service\WeChatSessionService.cs" />
+    <Compile Include="Database\BatchProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

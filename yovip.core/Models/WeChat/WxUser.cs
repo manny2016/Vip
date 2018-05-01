@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YoVip.Core.Models
 {
-    public class WeChatUser
+    public class WxUser
     {
         [Newtonsoft.Json.JsonProperty("openid")]
         public string OpenId { get; set; }

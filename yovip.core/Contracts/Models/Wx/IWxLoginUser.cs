@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YoVip.Core
 {
-    public interface IWeChatLoginUser
+    public interface IWxLoginUser
     {
         /// <summary>
         /// 登录Code

@@ -6,10 +6,13 @@ namespace YoVip.Core
     using YoVip.Core;
     using YoVip.Core.Models;
 
-    public interface IWeChatSessionService
+    public interface IWxSessionService
     {
-        WeChatSession CreateWeChatSession(IWeChatLoginUser loginUseer);
-        IWeChatAuthorization GetWeChatAuth(IWeChatLoginUser loginUser);
-        string GetOpenId(IWeChatLoginUser loginUser);
+        WxSession CreateWxSession(IWxLoginUser loginUseer);
+        IWxAuthorization GetWxAuth(IWxLoginUser loginUser);
+        string GetOpenId(IWxLoginUser loginUser);
+
+        IWxAccessToken GetWxAccessToken(string appid, string secret);
+        void CreatedCard(string token);
     }
 }

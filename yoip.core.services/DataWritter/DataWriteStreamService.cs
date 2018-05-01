@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿
 
-namespace YoVip.Core
+namespace YoVip.Core.Services
 {
+    using System.Threading;
     public class DataWriteStreamService : IDataWriteStreamService<IDataEntity>
     {
         private DataWriteStreamService() { }

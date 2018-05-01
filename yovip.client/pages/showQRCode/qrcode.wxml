@@ -1,0 +1,6 @@
+<!--pages/showQRCode/qrcode.wxml-->
+<view class="container">
+<view class='yovip-banner'>
+  <cover-image src='{{qrcode_url}}'></cover-image>
+</view> 
+</view> 

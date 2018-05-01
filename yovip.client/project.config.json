@@ -4,15 +4,15 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.98",
-	"appid": "wx6647cb456db305dd",
+	"libVersion": "1.9.98",	
+  "appid": "wx0c644f8027d78c74",
 	"projectname": "yovip.client",
 	"isGameTourist": false,
 	"condition": {

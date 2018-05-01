@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace YoVip.Core.Models
 {
-    public class WeChatSession
+    public class WxSession
     {
         public IMiniprogram Miniprogram { get; set; }
-        public IWeChatAuthorization Authorization { get; set; }
-        public IWeChatLoginUser LoginUser { get; set; }
+        public IWxAuthorization Authorization { get; set; }
+        public IWxLoginUser LoginUser { get; set; }
 
-        public WeChatUser WeCharUser { get; set; }
+        public WxUser WeCharUser { get; set; }
     }
 }

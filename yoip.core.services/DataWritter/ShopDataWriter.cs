@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YoVip.Core.Models.Entities;
+﻿
 
-namespace YoVip.Core
+namespace YoVip.Core.Services
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using YoVip.Core.Models.Entities;
+
     public class ShopDataWriter : IDataWritter<Shop>
     {
         public void Dispose() { }

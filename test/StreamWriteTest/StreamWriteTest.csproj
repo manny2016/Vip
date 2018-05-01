@@ -70,6 +70,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\yoip.core.services\yoip.core.services.csproj">
+      <Project>{ab3b7195-0d0e-4e05-8533-a13df0f1b3bf}</Project>
+      <Name>yoip.core.services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\yovip.core\yovip.core.csproj">
       <Project>{cb31f1de-93d3-4b99-8d3c-35a095be3747}</Project>
       <Name>yovip.core</Name>

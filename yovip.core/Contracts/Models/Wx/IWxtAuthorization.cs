@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YoVip.Core
 {
-    public interface IWeChatAuthorization
+    public interface IWxAuthorization
     {
 
         string SessionKey { get; }
