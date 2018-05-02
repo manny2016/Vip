@@ -83,7 +83,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Extensions\DatabaseValueExtension.cs" />
     <Compile Include="Common\Util\AESUtil.cs" />
     <Compile Include="Common\Util\Guard.cs" />
     <Compile Include="Common\Util\WxUtil.cs" />
@@ -96,7 +95,7 @@
     <Compile Include="Contracts\Services\IDataWriteStreamService.cs" />
     <Compile Include="Contracts\Services\IDataWritter.cs" />
     <Compile Include="Contracts\Services\IWeChatSessionService.cs" />
-    <Compile Include="Database\Extension\DatabaseExtension.cs" />
+    <Compile Include="Common\Extensions\DatabaseExtension.cs" />
     <Compile Include="Database\Models\MySQLDataEntity.cs" />
     <Compile Include="Enums\DealingTypes.cs" />
     <Compile Include="Models\Entities\Deal.cs" />

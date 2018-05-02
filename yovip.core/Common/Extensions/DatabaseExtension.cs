@@ -17,6 +17,11 @@ namespace YoVip.Core
             return text.Replace("'", "\'")
                 .Replace("\"", "\\\"");
         }
+        public static bool IsDBNull(this object obj)
+        {
+            if (obj == null) return false;
+            return obj.GetType().Name.Equals("DBNull");
+        }
         //public static IEnumerable<T> SqlQuery<T>(this Database database, DbCommand command) where T : MSSqlDataEntity
         //{
         //    using (IDataReader reader = database.ExecuteReader(command))
