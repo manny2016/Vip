@@ -12,5 +12,6 @@ namespace YoVip.Core.Models
         public virtual string ImageUrl { get; set; }
         [Newtonsoft.Json.JsonProperty("text")]
         public virtual string Text { get; set; }
+
     }
 }
