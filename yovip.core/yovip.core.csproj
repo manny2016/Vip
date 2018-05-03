@@ -89,6 +89,7 @@
     <Compile Include="Contracts\Models\IDataEntity.cs" />
     <Compile Include="Contracts\Models\Wx\IMiniprogram.cs" />
     <Compile Include="Contracts\Models\Wx\IWxAccessToken.cs" />
+    <Compile Include="Contracts\Models\Wx\IWxCard.cs" />
     <Compile Include="Contracts\Models\Wx\IWxtAuthorization.cs" />
     <Compile Include="Contracts\Models\Wx\IWxLoginUser.cs" />
     <Compile Include="Contracts\Services\IDataWriteDirectlyService.cs" />
@@ -97,7 +98,10 @@
     <Compile Include="Contracts\Services\IWeChatSessionService.cs" />
     <Compile Include="Common\Extensions\DatabaseExtension.cs" />
     <Compile Include="Database\Models\MySQLDataEntity.cs" />
+    <Compile Include="Enums\WxCodeTypes.cs" />
+    <Compile Include="Enums\WxDateInfoTypes.cs" />
     <Compile Include="Enums\DealingTypes.cs" />
+    <Compile Include="Enums\WxCardTypes.cs" />
     <Compile Include="Models\Entities\Deal.cs" />
     <Compile Include="Models\Entities\MemberAssetsCard.cs" />
     <Compile Include="Models\Entities\MemberAssetsCoupon.cs" />
@@ -105,6 +109,13 @@
     <Compile Include="Models\Entities\Shop.cs" />
     <Compile Include="Models\Entities\ShopAdmin.cs" />
     <Compile Include="Models\Entities\ShopAssets.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxDateInfo.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxTimeLimit.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxAbstract.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxAdvancedInfo.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxCardBaseInfo.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxSku.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxTextImage.cs" />
     <Compile Include="Models\WeChat\Miniprogram.cs" />
     <Compile Include="Models\WeChat\WxAccessToken.cs" />
     <Compile Include="Models\WeChat\WxAuthorization.cs" />
@@ -118,8 +129,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Models\WeChat\CardModels\Templates\cash.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\WeChat\CardModels\Templates\discount.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\WeChat\CardModels\Templates\general_coupon.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\WeChat\CardModels\Templates\gift.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\WeChat\CardModels\Templates\groupon.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\WeChat\CardModels\Templates\member_card.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Common\Extensions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

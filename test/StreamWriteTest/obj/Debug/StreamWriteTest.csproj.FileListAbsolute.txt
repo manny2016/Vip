@@ -10,7 +10,6 @@ D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\yovip.core.pdb
 D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\yovip.core.dll.config
 D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\System.Threading.Tasks.Dataflow.xml
 D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Newtonsoft.Json.xml
-D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\org.joey.common.pdb
 D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Autofac.xml
 D:\Workspaces\yovip\test\StreamWriteTest\obj\Debug\StreamWriteTest.csprojResolveAssemblyReference.cache
 D:\Workspaces\yovip\test\StreamWriteTest\obj\Debug\StreamWriteTest.exe
@@ -23,3 +22,12 @@ D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Google.Protobuf.dll
 D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\MySql.Data.dll
 D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Google.Protobuf.xml
 D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\MySql.Data.xml
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\yoip.core.services.dll
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\yoip.core.services.pdb
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\yoip.core.services.dll.config
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Models\WeChat\CardModels\Templates\cash.json
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Models\WeChat\CardModels\Templates\discount.json
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Models\WeChat\CardModels\Templates\general_coupon.json
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Models\WeChat\CardModels\Templates\gift.json
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Models\WeChat\CardModels\Templates\groupon.json
+D:\Workspaces\yovip\test\StreamWriteTest\bin\Debug\Models\WeChat\CardModels\Templates\member_card.json
