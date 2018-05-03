@@ -96,7 +96,7 @@
     <Compile Include="Contracts\Services\IDataWriteStreamService.cs" />
     <Compile Include="Contracts\Services\IDataWritter.cs" />
     <Compile Include="Contracts\Services\IWeChatSessionService.cs" />
-    <Compile Include="Database\Extension\DatabaseExtension.cs" />
+    <Compile Include="Common\Extensions\DatabaseExtension.cs" />
     <Compile Include="Database\Models\MySQLDataEntity.cs" />
     <Compile Include="Enums\WxCodeTypes.cs" />
     <Compile Include="Enums\WxDateInfoTypes.cs" />
