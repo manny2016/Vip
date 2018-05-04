@@ -2,7 +2,7 @@
 
 namespace YoVip.Core.Models
 {
-    using System;
+
     using Newtonsoft.Json;
     using System.ComponentModel;
 
@@ -51,7 +51,6 @@ namespace YoVip.Core.Models
         [DefaultValue(1)]
         public virtual int Uselimit { get; set; }
 
-
         [Newtonsoft.Json.JsonProperty("get_limit")]
         [DefaultValue(1)]
         public virtual int Getlimit { get; set; }
@@ -92,8 +91,40 @@ namespace YoVip.Core.Models
         [Newtonsoft.Json.JsonProperty("promotion_url")]
         public virtual string PromotionUrl { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("source")]
-        public virtual string Source { get; set; }   
+        [Newtonsoft.Json.JsonProperty("need_push_on_view", NullValueHandling = NullValueHandling.Ignore)]
+        public virtual bool? NeedPushOnview { get; set; }
 
+        [Newtonsoft.Json.JsonProperty("source")]
+        public virtual string Source { get; set; }
+
+        //        "base_info": {
+        //  "logo_url": "http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZ/0",
+        //  "brand_name": "海底捞",
+        //  "code_type": "CODE_TYPE_TEXT",
+        //  "title": "海底捞会员卡",
+        //  "color": "Color010",
+        //  "notice": "使用时向服务员出示此券",
+        //  "service_phone": "020-88888888",
+        //  "description": "不可与其他优惠同享",
+        //  "date_info": {
+        //    "type": "DATE_TYPE_PERMANENT"
+        //  },
+        //  "sku": {
+        //    "quantity": 50000000
+        //  },
+        //  "get_limit": 3,
+        //  "use_custom_code": false,
+        //  "can_give_friend": true,
+        //  "location_id_list": [
+        //    123,
+        //    12321
+        //  ],
+        //  "custom_url_name": "立即使用",
+        //  "custom_url": "http://weixin.qq.com",
+        //  "custom_url_sub_title": "6个汉字tips",
+        //  "promotion_url_name": "营销入口1",
+        //  "promotion_url": "http://www.qq.com",
+        //  "need_push_on_view": true
+        //},
     }
 }

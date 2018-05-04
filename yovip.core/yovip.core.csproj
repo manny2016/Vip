@@ -109,7 +109,28 @@
     <Compile Include="Models\Entities\Shop.cs" />
     <Compile Include="Models\Entities\ShopAdmin.cs" />
     <Compile Include="Models\Entities\ShopAssets.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxBaseCard.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxCardContext.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxCardWapper.cs" />
+    <Compile Include="Models\WeChat\CardModels\CashWxBaseCard.cs">
+      <DependentUpon>WxBaseCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\WeChat\CardModels\WxDateInfo.cs" />
+    <Compile Include="Models\WeChat\CardModels\DiscountWxBaseCard.cs">
+      <DependentUpon>WxBaseCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WeChat\CardModels\GeneralCouponWxBaseCard.cs">
+      <DependentUpon>WxBaseCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WeChat\CardModels\GiftWxBaseCard.cs">
+      <DependentUpon>WxBaseCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WeChat\CardModels\GrouponWxBaseCard.cs">
+      <DependentUpon>WxBaseCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WeChat\CardModels\MemberWxBaseCard.cs">
+      <DependentUpon>WxBaseCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\WeChat\CardModels\WxTimeLimit.cs" />
     <Compile Include="Models\WeChat\CardModels\WxAbstract.cs" />
     <Compile Include="Models\WeChat\CardModels\WxAdvancedInfo.cs" />
