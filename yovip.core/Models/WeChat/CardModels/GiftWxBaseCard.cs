@@ -8,6 +8,7 @@ namespace YoVip.Core.Models
 {
     public class GiftWxBaseCard : WxBaseCard
     {
-
+        [Newtonsoft.Json.JsonProperty("gift")]
+        public virtual string Gift { get; set; }
     }
 }

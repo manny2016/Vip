@@ -83,8 +83,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Extensions\JsonObjectExtension.cs" />
     <Compile Include="Common\Util\AESUtil.cs" />
     <Compile Include="Common\Util\Guard.cs" />
+    <Compile Include="Common\JPathConstant.cs" />
     <Compile Include="Common\Util\WxUtil.cs" />
     <Compile Include="Contracts\Models\IDataEntity.cs" />
     <Compile Include="Contracts\Models\Wx\IMiniprogram.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Enums\WxDateInfoTypes.cs" />
     <Compile Include="Enums\DealingTypes.cs" />
     <Compile Include="Enums\WxCardTypes.cs" />
+    <Compile Include="Enums\WxMediaTypes.cs" />
     <Compile Include="Models\Entities\Deal.cs" />
     <Compile Include="Models\Entities\MemberAssetsCard.cs" />
     <Compile Include="Models\Entities\MemberAssetsCoupon.cs" />
@@ -110,11 +113,13 @@
     <Compile Include="Models\Entities\ShopAdmin.cs" />
     <Compile Include="Models\Entities\ShopAssets.cs" />
     <Compile Include="Models\WeChat\CardModels\WxBaseCard.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxBonusRule.cs" />
     <Compile Include="Models\WeChat\CardModels\WxCardContext.cs" />
     <Compile Include="Models\WeChat\CardModels\WxCardWapper.cs" />
     <Compile Include="Models\WeChat\CardModels\CashWxBaseCard.cs">
       <DependentUpon>WxBaseCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\WeChat\CardModels\WxCustomField.cs" />
     <Compile Include="Models\WeChat\CardModels\WxDateInfo.cs" />
     <Compile Include="Models\WeChat\CardModels\DiscountWxBaseCard.cs">
       <DependentUpon>WxBaseCard.cs</DependentUpon>
@@ -137,11 +142,14 @@
     <Compile Include="Models\WeChat\CardModels\WxCardBaseInfo.cs" />
     <Compile Include="Models\WeChat\CardModels\WxSku.cs" />
     <Compile Include="Models\WeChat\CardModels\WxTextImage.cs" />
+    <Compile Include="Models\WeChat\CardModels\WxCustomCell.cs" />
     <Compile Include="Models\WeChat\Miniprogram.cs" />
     <Compile Include="Models\WeChat\WxAccessToken.cs" />
     <Compile Include="Models\WeChat\WxAuthorization.cs" />
     <Compile Include="Models\WeChat\WxLoginUser.cs" />
+    <Compile Include="Models\WeChat\WxResults\CreateCardWxResponse.cs" />
     <Compile Include="Models\WeChat\WxResults\QRCodeWxResponse.cs" />
+    <Compile Include="Models\WeChat\WxResults\UploadWxResponse.cs" />
     <Compile Include="Models\WeChat\WxResults\WxResponse.cs" />
     <Compile Include="Models\WeChat\WxSession.cs" />
     <Compile Include="Models\WeChat\WxUser.cs" />
@@ -170,8 +178,6 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\Extensions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

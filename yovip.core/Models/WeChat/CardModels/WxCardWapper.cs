@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace YoVip.Core.Models
 {
-    public class WxCardWapper<T> where T : WxCardContext
+    public class WxCardWapper<Context, BaseCard>
+        where Context : WxCardContext<BaseCard>
+        where BaseCard : WxBaseCard
     {
         [Newtonsoft.Json.JsonProperty("card")]
-        public T Card { get; set; }
+        public Context Card { get; set; }
     }
 }

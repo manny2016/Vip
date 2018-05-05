@@ -28,9 +28,9 @@ namespace YoVip.Core
         {
             return string.Format("https://api.weixin.qq.com/card/create?access_token={0}", token);
         }
-        public static string GenerateWxUploaMediaUrl(string token)
+        public static string GenerateWxUploaMediaUrl(string token, WxMediaTypes mediaType)
         {
-            return string.Format("https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token={0}&type=image", token);
+            return string.Format("https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token={0}&type={1}", token, mediaType.ToString());
         }
         public static string GenerateWxtestwhitelist(string token)
         {
@@ -39,6 +39,10 @@ namespace YoVip.Core
         public static string GenerateWxQRCodeUrl(string token)
         {
             return string.Format("https://api.weixin.qq.com/card/qrcode/create?access_token={0}", token);
+        }
+        public static string GenrateWxPaycell(string token)
+        {
+            return string.Format("https://api.weixin.qq.com/card/paycell/set?access_token={0}", token);
         }
     }
 }

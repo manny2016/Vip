@@ -2,8 +2,9 @@
 
 namespace YoVip.Core.Models
 {
-    public class WxGrouponBaseCard : WxBaseCard
+    public class GrouponWxBaseCard : WxBaseCard
     {
-
+        [Newtonsoft.Json.JsonProperty("deal_detail")]
+        public virtual string DealDetail { get; set; }
     }
 }

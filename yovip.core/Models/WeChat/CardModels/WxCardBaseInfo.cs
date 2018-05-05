@@ -44,8 +44,9 @@ namespace YoVip.Core.Models
         public virtual WxSku Sku { get; set; }
 
 
+
         [Newtonsoft.Json.JsonProperty("location_id_list")]
-        public virtual long[] LocationIdList { get; set; }
+        public virtual decimal[] LocationIdList { get; set; }
 
         [Newtonsoft.Json.JsonProperty("use_limit")]
         [DefaultValue(1)]
@@ -58,8 +59,8 @@ namespace YoVip.Core.Models
         [Newtonsoft.Json.JsonProperty("use_custom_code")]
         public virtual bool UseCustomCode { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("bind_openid")]
-        public virtual bool BindOpenid { get; set; }
+        [Newtonsoft.Json.JsonProperty("bind_openid",NullValueHandling = NullValueHandling.Ignore)]
+        public virtual bool? BindOpenid { get; set; }
 
         [Newtonsoft.Json.JsonProperty("can_share")]
         public virtual bool CanShare { get; set; }

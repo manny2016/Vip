@@ -8,10 +8,14 @@ namespace YoVip.Core.Models
 {
     public abstract class WxResponse
     {
-        
-        [Newtonsoft.Json.JsonProperty("errcode")]
-        public virtual int ErrCode { get; set; }
-        [Newtonsoft.Json.JsonProperty("errmsg")]
+
+        [Newtonsoft.Json.JsonProperty("errcode", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public virtual int? ErrCode { get; set; }
+        [Newtonsoft.Json.JsonProperty("errmsg", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public virtual string ErrMsg { get; set; }
+    }
+    public  class NormalWxResponse : WxResponse
+    {
+
     }
 }

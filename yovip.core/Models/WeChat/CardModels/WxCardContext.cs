@@ -3,49 +3,45 @@
 namespace YoVip.Core.Models
 {
     using System;
-    public abstract class WxCardContext
+    public abstract class WxCardContext<T> where T : WxBaseCard
     {
+
         [Newtonsoft.Json.JsonProperty("card_type")]
         public virtual string CardType { get; set; }
-
-        public virtual WxBaseCard SpecificCard
+        public virtual T Card
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
         }
     }
-
-    public class CashWxCardContext : WxCardContext
+    public class CashCardWxCardContext : WxCardContext<CashWxBaseCard>
     {
         [Newtonsoft.Json.JsonProperty("cash")]
-        public override WxBaseCard SpecificCard { get; set; }
+        public override CashWxBaseCard Card { get; set; }
     }
-
-    public class DiscountWxCardContext : WxCardContext
+    public class DiscountWxCardContext : WxCardContext<DiscountWxBaseCard>
     {
         [Newtonsoft.Json.JsonProperty("discount")]
-        public override WxBaseCard SpecificCard { get; set; }
+        public override DiscountWxBaseCard Card { get; set; }
     }
-    public class GeneralCouponWxCardContext : WxCardContext
+    public class GeneralCouponWxCardContext : WxCardContext<GeneralCouponWxBaseCard>
     {
         [Newtonsoft.Json.JsonProperty("general_coupon")]
-        public override WxBaseCard SpecificCard { get; set; }
+        public override GeneralCouponWxBaseCard Card { get; set; }
     }
-    public class GiftWxCardContext : WxCardContext
+    public class GiftWxCardContext : WxCardContext<GiftWxBaseCard>
     {
         [Newtonsoft.Json.JsonProperty("gift")]
-        public override WxBaseCard SpecificCard { get; set; }
+        public override GiftWxBaseCard Card { get; set; }
     }
-
-    public class GrouponWxCardContext : WxCardContext
+    public class GrouponWxCardContext : WxCardContext<GrouponWxBaseCard>
     {
         [Newtonsoft.Json.JsonProperty("groupon")]
-        public override WxBaseCard SpecificCard { get; set; }
+        public override GrouponWxBaseCard Card { get; set; }
     }
-
-    public class MemberWxCardContext : WxCardContext
+    public class MemberWxCardContext : WxCardContext<MemberWxBaseCard>
     {
         [Newtonsoft.Json.JsonProperty("member_card")]
-        public override WxBaseCard SpecificCard { get; set; }
+        public override MemberWxBaseCard Card { get; set; }
     }
 }

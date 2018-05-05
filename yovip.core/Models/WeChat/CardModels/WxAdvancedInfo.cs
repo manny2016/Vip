@@ -5,6 +5,22 @@ namespace YoVip.Core.Models
     {
         [Newtonsoft.Json.JsonProperty("use_condition")]
         public virtual UseCondition UseCondition { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("abstract", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public virtual WxAbstract Abstract { get; set; }
+
+
+        [Newtonsoft.Json.JsonProperty("text_image_list", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public virtual WxTextImage[] TextImageList { get; set; }
+
+
+        [Newtonsoft.Json.JsonProperty("time_limit", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public virtual WxTimeLimit[] TimeLimit { get; set; }
+
+
+        [Newtonsoft.Json.JsonProperty("business_service", NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public virtual string[] BusinessService { get; set; }
+
     }
     public class UseCondition
     {

@@ -8,6 +8,7 @@ namespace YoVip.Core.Models
 {
     public class GeneralCouponWxBaseCard : WxBaseCard
     {
-
+        [Newtonsoft.Json.JsonProperty("default_detail")]
+        public virtual string DefaultDetail { get; set; }
     }
 }
