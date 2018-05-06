@@ -16,7 +16,7 @@
           "type": "DATE_TYPE_PERMANENT"
         },
         "sku": {
-          "quantity": 50000000
+          "quantity": 5
         },
         "get_limit": 3,
         "use_custom_code": false,

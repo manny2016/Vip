@@ -1,6 +1,6 @@
 using System;
 
-namespace Vip.Api.Areas.HelpPage.ModelDescriptions
+namespace YoVip.Portal.Api.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {

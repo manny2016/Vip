@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace VIP.Api
+namespace YoVip.Portal.Api
 {
     public class BundleConfig
     {

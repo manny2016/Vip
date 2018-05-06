@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Vip.Api.Areas.HelpPage.ModelDescriptions
+namespace YoVip.Portal.Api.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterDescription
     {

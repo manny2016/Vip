@@ -136,6 +136,7 @@
     <Compile Include="Models\WeChat\CardModels\MemberWxBaseCard.cs">
       <DependentUpon>WxBaseCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\WeChat\CardModels\WxSubMerchantId.cs" />
     <Compile Include="Models\WeChat\CardModels\WxTimeLimit.cs" />
     <Compile Include="Models\WeChat\CardModels\WxAbstract.cs" />
     <Compile Include="Models\WeChat\CardModels\WxAdvancedInfo.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Models\WeChat\WxResults\UploadWxResponse.cs" />
     <Compile Include="Models\WeChat\WxResults\WxResponse.cs" />
     <Compile Include="Models\WeChat\WxSession.cs" />
+    <Compile Include="Models\WeChat\WxSubMerchant.cs" />
     <Compile Include="Models\WeChat\WxUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Database\BatchProcessor.cs" />

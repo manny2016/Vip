@@ -93,74 +93,16 @@ namespace YoVip.Core.Services
             var request = WxUtil.GenerateWxTokenRequestUrl(appid, secret);
             return request.GetResponseForJson<WxAccessToken>();
         }
-        public void CreatedCard(string token)
+        public CreateCardWxResponse CreatedCard(string token)
         {
-            var request = WxUtil.GenerateWxCreateCardUrl(token);
-            var context = request.GetResponse((http) =>
-             {
-                 http.Method = "POST";
-                 http.ContentType = "application/json; encoding=utf-8";
-                 var data = new
-                 {
-                     card = new
-                     {
-                         card_type = "GROUPON",
-                         groupon = new
-                         {
-                             base_info = new
-                             {
-                                 logo_url = @"http://mmbiz.qpic.cn\mmbiz_jpg\EEMV7pCMmetWLAjhFtj2K5kdy5sK8z6hdlQbTe0ibtfIlZhibuKoAibe5dhA1VReGWPzz7vHcQExQSicKWrMicicND0A\0",
-                                 brand_name = "Joey's shop",
-                                 code_type = "CODE_TYPE_TEXT",
-                                 title = "132元双人火锅套餐",
-                                 sub_title = "周末狂欢必备",
-                                 color = "Color010",
-                                 notice = "使用时向服务员出示此券",
-                                 service_phone = "13961576298",
-                                 description = "不可与其他优惠同享如需团购券发票，请在消费时向商户提出店内均可使用，仅限堂食",
-                                 date_info = new
-                                 {
-                                     type = "DATE_TYPE_FIX_TERM",
-                                     fixed_term = 15,
-                                     fixed_begin_term = 0
-                                 },
-                                 sku = new
-                                 {
-                                     quantity = 10000
-                                 },
-                                 get_limit = 3,
-                                 use_custom_code = false,
-                                 bind_openid = false,
-                                 can_share = true,
-                                 can_give_friend = true,
-                                 location_id_list = new[]
-                                 {
-                                     123,
-                                     12321,
-                                     345345
-                                 },
-                                 custom_url_name = "立即使用",
-                                 custom_url = "https://www.baidu.com",
-                                 custom_url_sub_title = "6个汉字",
-                                 promotion_url_name = "更多优惠",
-                                 promotion_url = "https://www.163.com"
-                             },
-                             deal_detail = "dddddddd"
-                         }
-                     }
-                 };
-                 using (var stream = http.GetRequestStream())
-                 {
-                     var buffers = UTF8Encoding.UTF8.GetBytes(data.ToJson());
-                     stream.Write(buffers, 0, buffers.Length);
-                     stream.Flush();
-                 }
-                 return http;
-             });
+            var wapper = File.ReadAllText(@"D:\Workspaces\yovip\portals\yovip.api\bin\Models\WeChat\CardModels\Templates\member_card.json")
+                .DeserializeToObject<WxCardWapper<MemberWxCardContext, MemberWxBaseCard>>();
+
+            return WxApiService.Create(token, wapper);
         }
         public void PostLogImage(string token)
         {
-            var request = WxUtil.GenerateWxUploaMediaUrl(token);
+            var request = WxUtil.GenerateWxUploaMediaUrl(token, WxMediaTypes.Image);
             var context = request.GetResponse((http) =>
             {
                 http.Method = "POST";
@@ -197,28 +139,7 @@ namespace YoVip.Core.Services
                 return http;
             });
         }
-        public void CreateTestwhiteList(string token)
-        {
 
-            var request = WxUtil.GenerateWxtestwhitelist(token);
-            var context = request.GetResponse((http) =>
-            {
-                http.Method = "POST";
-                http.ContentType = "application/json; encoding=utf-8";
-                var data = new
-                {
-                    openid = new string[] { },
-                    username = new string[] { "s66822351" }
-                };
-                using (var stream = http.GetRequestStream())
-                {
-                    var buffers = UTF8Encoding.UTF8.GetBytes(data.ToJson());
-                    stream.Write(buffers, 0, buffers.Length);
-                    stream.Flush();
-                }
-                return http;
-            });
-        }
         public QRCodeWxResponse CreateWxQRCode(string token, string cardid)
         {
             var request = WxUtil.GenerateWxQRCodeUrl(token);
@@ -255,9 +176,6 @@ namespace YoVip.Core.Services
             //{ "errcode":0,"errmsg":"ok","ticket":"gQGX7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyMkZNbVVqeHlkb2oxU1dfRWhxNGwAAgSyeOhaAwQIBwAA","expire_seconds":1800,"url":"http:\/\/weixin.qq.com\/q\/022FMmUjxydoj1SW_Ehq4l","show_qrcode_url":"https:\/\/mp.weixin.qq.com\/cgi-bin\/showqrcode?ticket=gQGX7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyMkZNbVVqeHlkb2oxU1dfRWhxNGwAAgSyeOhaAwQIBwAA"}
             return qrcode;
         }
-        public void CreateWxMemberCard(string token)
-        {
 
-        }
     }
 }

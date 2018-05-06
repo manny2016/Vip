@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yovip.api", "portals\yovip.api\yovip.api.csproj", "{A71D6F5A-36AC-48B5-9FB8-DEC116E86D1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yovip.portal.api", "portals\yovip.api\yovip.portal.api.csproj", "{A71D6F5A-36AC-48B5-9FB8-DEC116E86D1E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yovip.core", "yovip.core\yovip.core.csproj", "{CB31F1DE-93D3-4B99-8D3C-35A095BE3747}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{406072D2-B245-4B16-BBBF-19436DEB9EAD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamWriteTest", "test\StreamWriteTest\StreamWriteTest.csproj", "{7F8DAB36-D43A-4A2E-8838-A29746616955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yovip.portal.dashboard", "portals\yovip.portal.dashboard\yovip.portal.dashboard.csproj", "{60FC2C48-A717-4DB2-866D-0C5FB4DAA86C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "portals\WebApplication2\WebApplication2.csproj", "{D0EB004F-11EA-4A0D-B74D-CC74298B2D08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{7F8DAB36-D43A-4A2E-8838-A29746616955}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F8DAB36-D43A-4A2E-8838-A29746616955}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F8DAB36-D43A-4A2E-8838-A29746616955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60FC2C48-A717-4DB2-866D-0C5FB4DAA86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FC2C48-A717-4DB2-866D-0C5FB4DAA86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FC2C48-A717-4DB2-866D-0C5FB4DAA86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FC2C48-A717-4DB2-866D-0C5FB4DAA86C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EB004F-11EA-4A0D-B74D-CC74298B2D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EB004F-11EA-4A0D-B74D-CC74298B2D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EB004F-11EA-4A0D-B74D-CC74298B2D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EB004F-11EA-4A0D-B74D-CC74298B2D08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A71D6F5A-36AC-48B5-9FB8-DEC116E86D1E} = {E349A887-6017-44DE-B6A5-D254F6F66A2E}
 		{7F8DAB36-D43A-4A2E-8838-A29746616955} = {406072D2-B245-4B16-BBBF-19436DEB9EAD}
+		{60FC2C48-A717-4DB2-866D-0C5FB4DAA86C} = {E349A887-6017-44DE-B6A5-D254F6F66A2E}
+		{D0EB004F-11EA-4A0D-B74D-CC74298B2D08} = {E349A887-6017-44DE-B6A5-D254F6F66A2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45

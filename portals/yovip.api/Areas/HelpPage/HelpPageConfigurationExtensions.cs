@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using Vip.Api.Areas.HelpPage.ModelDescriptions;
-using Vip.Api.Areas.HelpPage.Models;
+using YoVip.Portal.Api.Areas.HelpPage.ModelDescriptions;
+using YoVip.Portal.Api.Areas.HelpPage.Models;
 
-namespace Vip.Api.Areas.HelpPage
+namespace YoVip.Portal.Api.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

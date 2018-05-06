@@ -44,5 +44,13 @@ namespace YoVip.Core
         {
             return string.Format("https://api.weixin.qq.com/card/paycell/set?access_token={0}", token);
         }
+        public static string GenerateWxSelfconsumecell(string token)
+        {
+            return string.Format("https://api.weixin.qq.com/card/selfconsumecell/set?access_token={0}", token);
+        }
+        public static string GenerateWxCreateSubMerchant(string token)
+        {
+            return string.Format("https://api.weixin.qq.com/card/submerchant/submit?access_token={0}", token);
+        }
     }
 }

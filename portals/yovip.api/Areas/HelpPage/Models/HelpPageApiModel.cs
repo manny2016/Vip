@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using Vip.Api.Areas.HelpPage.ModelDescriptions;
+using YoVip.Portal.Api.Areas.HelpPage.ModelDescriptions;
 
-namespace Vip.Api.Areas.HelpPage.Models
+namespace YoVip.Portal.Api.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

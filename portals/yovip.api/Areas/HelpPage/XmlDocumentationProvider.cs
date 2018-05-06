@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using Vip.Api.Areas.HelpPage.ModelDescriptions;
+using YoVip.Portal.Api.Areas.HelpPage.ModelDescriptions;
 
-namespace Vip.Api.Areas.HelpPage
+namespace YoVip.Portal.Api.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.

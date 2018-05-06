@@ -13,12 +13,7 @@ namespace YoVip.Core.Services
 
     public class WxApiService
     {
-        /// <summary>
-        /// Upload Wx media see https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1451025056
-        /// </summary>
-        /// <param name="token">token</param>
-        /// <param name="fileName">media fullName</param>
-        /// <returns></returns>
+
         public static UploadWxResponse UploadImg(string token, string fileName)
         {
             Microsoft.Practices.EnterpriseLibrary.Common.Utility.Guard.ArgumentNotNull(token, "token");
@@ -91,7 +86,6 @@ namespace YoVip.Core.Services
         {
             return Create<CashCardWxCardContext, CashWxBaseCard>(token, wapper);
         }
-
         private static CreateCardWxResponse Create<CardContext, BaseCard>(string token, WxCardWapper<CardContext, BaseCard> wapper)
             where CardContext : WxCardContext<BaseCard>
             where BaseCard : WxBaseCard
@@ -134,6 +128,111 @@ namespace YoVip.Core.Services
                 }
                 return http;
             });
+        }
+        /// <summary>
+        /// 设置自动核销
+        /// </summary>
+        /// <param name="token"></param>
+        /// <param name="cardid"></param>
+        /// <param name="isOpen"></param>
+        public static NormalWxResponse SelfConsumeCellSet(string token, string cardid, bool isOpen = true)
+        {
+            var request = WxUtil.GenerateWxSelfconsumecell(token);
+            return request.GetResponseForJson<NormalWxResponse>((http) =>
+            {
+                http.Method = "POST";
+                http.ContentType = "application/json; encoding=utf-8";
+                var data = new
+                {
+                    card_id = cardid,
+                    is_open = isOpen,
+                    need_verify_cod = false,
+                    need_remark_amount = false
+                };
+                using (var stream = http.GetRequestStream())
+                {
+                    var buffers = UTF8Encoding.UTF8.GetBytes(data.ToJson());
+                    stream.Write(buffers, 0, buffers.Length);
+                    stream.Flush();
+                }
+                return http;
+            });
+        }
+
+        public static NormalWxResponse CreateTestwhiteList(string token,
+            string[] usernams,
+            string[] openids = null)
+        {
+            var request = WxUtil.GenerateWxtestwhitelist(token);
+            return request.GetResponseForJson<NormalWxResponse>((http) =>
+            {
+                http.Method = "POST";
+                http.ContentType = "application/json; encoding=utf-8";
+                var data = new
+                {
+                    openid = openids ?? new string[] { },
+                    username = new string[] { "s66822351" }
+                };
+                using (var stream = http.GetRequestStream())
+                {
+                    var buffers = UTF8Encoding.UTF8.GetBytes(data.ToJson());
+                    stream.Write(buffers, 0, buffers.Length);
+                    stream.Flush();
+                }
+                return http;
+            });
+        }
+
+        public static QRCodeWxResponse CreateWxQRCode(string token, string cardid)
+        {
+            var request = WxUtil.GenerateWxQRCodeUrl(token);
+
+            var qrcode = request.GetResponseForJson<QRCodeWxResponse>((http) =>
+            {
+                http.Method = "POST";
+                http.ContentType = "application/json; encoding=utf-8";
+                var data = new
+                {
+                    action_name = "QR_CARD",
+                    expire_seconds = 1800,
+                    action_info = new
+                    {
+                        card = new
+                        {
+                            card_id = cardid,
+                            code = "",
+                            openid = "",
+                            is_unique_code = false,
+                            outer_str = "13b",
+                        }
+                    }
+                };
+                using (var stream = http.GetRequestStream())
+                {
+                    var buffers = UTF8Encoding.UTF8.GetBytes(data.ToJson());
+                    stream.Write(buffers, 0, buffers.Length);
+                    stream.Flush();
+                }
+                return http;
+            });
+            return qrcode;
+        }
+        public static string CreateSubMerchant(string token, WxSubMerchant merchant)
+        {
+            var request = WxUtil.GenerateWxQRCodeUrl(token);
+
+            return request.GetResponse((http) =>
+             {
+                 http.Method = "POST";
+                 http.ContentType = "application/json; encoding=utf-8";
+                 using (var stream = http.GetRequestStream())
+                 {
+                     var buffers = UTF8Encoding.UTF8.GetBytes(merchant.ToJson());
+                     stream.Write(buffers, 0, buffers.Length);
+                     stream.Flush();
+                 }
+                 return http;
+             });
         }
     }
 }

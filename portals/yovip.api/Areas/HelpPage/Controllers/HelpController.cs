@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using Vip.Api.Areas.HelpPage.ModelDescriptions;
-using Vip.Api.Areas.HelpPage.Models;
+using YoVip.Portal.Api.Areas.HelpPage.ModelDescriptions;
+using YoVip.Portal.Api.Areas.HelpPage.Models;
 
-namespace Vip.Api.Areas.HelpPage.Controllers
+namespace YoVip.Portal.Api.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

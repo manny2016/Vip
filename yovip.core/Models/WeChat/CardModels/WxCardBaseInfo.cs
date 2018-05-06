@@ -11,6 +11,9 @@ namespace YoVip.Core.Models
         [Newtonsoft.Json.JsonProperty("logo_url")]
         public virtual string LogoUrl { get; set; }
 
+        [Newtonsoft.Json.JsonProperty("sub_merchant_info", NullValueHandling = NullValueHandling.Ignore)]
+        public virtual WxSubMerchant SubMerchant { get; set; }
+
         [Newtonsoft.Json.JsonProperty("brand_name")]
         public virtual string BrandName { get; set; }
 
@@ -59,7 +62,7 @@ namespace YoVip.Core.Models
         [Newtonsoft.Json.JsonProperty("use_custom_code")]
         public virtual bool UseCustomCode { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("bind_openid",NullValueHandling = NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty("bind_openid", NullValueHandling = NullValueHandling.Ignore)]
         public virtual bool? BindOpenid { get; set; }
 
         [Newtonsoft.Json.JsonProperty("can_share")]

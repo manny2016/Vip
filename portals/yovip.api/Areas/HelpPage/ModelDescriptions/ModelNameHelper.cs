@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace Vip.Api.Areas.HelpPage.ModelDescriptions
+namespace YoVip.Portal.Api.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {
